@@ -1,0 +1,241 @@
+.about {
+  padding: 100px 15px;
+  background-color: #fff;
+}
+
+.img {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+.img img {
+  width: 100%;
+  border-radius: 4px;
+  display: block;
+}
+
+.text {
+  flex: 0 0 50%;
+  max-width: 50%;
+  padding-left: 30px;
+}
+
+.text h4 {
+  font-size: 25px;
+  font-weight: 600;
+  margin: 0 0 10px;
+  color: #000;
+}
+
+.text h6 {
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0 0 25px;
+  color: #000;
+}
+
+.text h6 span {
+  color: #5f88e0;
+  position: relative;
+}
+
+.text h6 span::before {
+  content: "";
+  left: 0;
+  right: 90%;
+  position: absolute;
+  height: 2px;
+  bottom: 0px;
+  transition: all 0.5s ease;
+}
+
+.text h6 span:hover::before {
+  content: "";
+  left: 0;
+  right: 0;
+  position: absolute;
+  height: 2px;
+  background-color: #5f88e0;
+  bottom: 0px;
+}
+
+.text p {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #838383;
+}
+
+.skills {
+  padding: 20px 0px;
+}
+
+.skills h6 {
+  font-size: 18px;
+  font-weight: 400;
+  margin: 0 0 25px;
+  color: #000;
+}
+
+.skills-list {
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.fa-ul li {
+  font-size: 14px;
+  font-weight: 400;
+  color: #838383
+}
+
+.fa-ul .fa-li {
+  font-size: 14px;
+  font-weight: 400;
+  color: #838383
+}
+
+.social-btn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  box-shadow: 
+      0 10px 20px rgba(0, 0, 0, 0.2),
+      inset 0 -3px 8px rgba(0, 0, 0, 0.3),
+      inset 0 3px 8px rgba(255, 255, 255, 0.1);
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  position: relative;
+  overflow: hidden;
+  margin: 1.5rem;
+}
+
+.social-btn::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 70%);
+  transform: scale(0);
+  transition: transform 0.6s ease;
+  border-radius: 50%;
+}
+
+.social-btn:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 
+      0 15px 30px rgba(0, 0, 0, 0.3),
+      inset 0 -3px 8px rgba(0, 0, 0, 0.3),
+      inset 0 3px 8px rgba(255, 255, 255, 0.1);
+}
+
+.social-btn:hover::before {
+  transform: scale(1);
+}
+
+.social-btn i {
+  color: white;
+  font-size: 4rem;
+  position: relative;
+  z-index: 1;
+  transition: transform 0.3s ease;
+}
+
+.social-btn:hover i {
+  transform: rotate(10deg) scale(1.1);
+}
+
+/* GitHub Specific */
+.github-btn {
+  background: linear-gradient(135deg, #333 0%, #000 100%);
+}
+
+.github-btn:hover {
+  background: linear-gradient(135deg, #4078c0 0%, #2a5a9a 100%);
+}
+
+.github-btn:hover::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(64, 120, 192, 0.6);
+  animation: pulse-blue 1.5s infinite;
+}
+
+/* Instagram Specific */
+.instagram-btn {
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+}
+
+.instagram-btn:hover {
+  background: linear-gradient(45deg, #ffdc80 0%, #f99157 25%, #e95950 50%, #d82d7b 75%, #a42a8b 100%);
+}
+
+.instagram-btn:hover::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(220, 39, 67, 0.6);
+  animation: pulse-purple 1.5s infinite;
+}
+
+/* Animations */
+@keyframes pulse-blue {
+  0% { box-shadow: 0 0 0 0 rgba(64, 120, 192, 0.6); }
+  70% { box-shadow: 0 0 0 15px rgba(64, 120, 192, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(64, 120, 192, 0); }
+}
+
+@keyframes pulse-purple {
+  0% { box-shadow: 0 0 0 0 rgba(220, 39, 67, 0.6); }
+  70% { box-shadow: 0 0 0 15px rgba(220, 39, 67, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(220, 39, 67, 0); }
+}
+
+/* Container */
+.social-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+/* Responsive Sizing */
+@media (max-width: 768px) {
+  .social-btn {
+      width: 8rem;
+      height: 8rem;
+      margin: 1rem;
+  }
+  .social-btn i {
+      font-size: 3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .social-btn {
+      width: 6rem;
+      height: 6rem;
+      margin: 0.75rem;
+  }
+  .social-btn i {
+      font-size: 2.5rem;
+  }
+  .social-container {
+      flex-direction: column;
+  }
+}

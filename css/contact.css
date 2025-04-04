@@ -1,0 +1,134 @@
+/* Basic button styling */
+.button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #5f88e0;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #01143e;
+}
+
+/* Contact section styling */
+.contact {
+    padding: 100px 15px;
+}
+
+.contact-form {
+    background-color: #fff;
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding: 40px;
+    border: 1.5px solid #eee;
+    border-radius: 5px;
+}
+
+.contact-text {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.contact-text h2 {
+    font-size: 26px;
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+}
+
+.contact-text p {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #838383;
+    margin: 0;
+}
+
+.contact-form .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.col-6 {
+    flex: 0 0 calc(50% - 15px);
+    max-width: calc(50% - 15px);
+}
+
+.col-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+.form-control {
+    height: 45px;
+    width: 100%;
+    margin-bottom: 15px;
+    border: 1px solid #ced4da;
+    padding: 6px 12px;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: "Montserrat", sans-serif;
+    border-radius: 5px;
+}
+
+.contact-form textarea.form-control {
+    height: 120px;
+    resize: vertical;
+}
+
+.form-control::placeholder {
+    color: #838383;
+}
+
+.btn {
+    text-align: right;
+    width: 100%;
+}
+
+/* Popup styling */
+.popup {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background-color: white;
+    padding: 40px;
+    border-radius: 5px;
+    position: relative;
+    max-width: 600px;
+    width: 100%;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #838383;
+    transition: color 0.3s ease;
+}
+
+.close:hover {
+    color: #01143e;
+}
